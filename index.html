@@ -44,6 +44,20 @@
             <button onclick="checkout()">Pay Now</button>
             <button onclick="closeCart()">Close</button>
         </div>
+        <div class="payment-form">
+    <h2>Select Sweet</h2>
+
+    <select id="item">
+        <option value="200">Gulab Jamun - ₹200</option>
+        <option value="800">Kaju Katli - ₹800</option>
+        <option value="350">Laddu - ₹350</option>
+    </select>
+
+    <input type="text" id="name" placeholder="Full Name">
+    <input type="email" id="email" placeholder="Email">
+
+    <button onclick="payCashfree()">Pay Now</button>
+</div>
     </div>
 
 <script src="script.js"></script>
