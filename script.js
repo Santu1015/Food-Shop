@@ -1,34 +1,52 @@
-let cart = [];
-let total = 0;
-
-function addToCart(name, price) {
-    cart.push({name, price});
-    total += price;
-    document.getElementById("cart-count").innerText = cart.length;
-    alert(name + " added to cart!");
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #fff5eb;
 }
 
-function viewCart() {
-    document.getElementById("cart-modal").style.display = "block";
-    let list = document.getElementById("cart-items");
-    list.innerHTML = "";
-
-    cart.forEach(item => {
-        let li = document.createElement("li");
-        li.innerText = item.name + " - ₹" + item.price;
-        list.appendChild(li);
-    });
-
-    document.getElementById("total").innerText = total;
+header {
+    background: #ff6b6b;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
 }
 
-function closeCart() {
-    document.getElementById("cart-modal").style.display = "none";
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
 }
 
-function checkout() {
-    alert("Redirecting to Payment Gateway...");
+.product {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ddd;
+    text-align: center;
+}
 
-    // 👉 Replace this with your Payment Gateway Link
-    window.location.href = "https://your-payment-link.com";
+button {
+    background: #ff6b6b;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.cart-box {
+    background: white;
+    padding: 20px;
+    margin: 100px auto;
+    width: 300px;
 }
