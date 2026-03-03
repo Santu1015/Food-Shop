@@ -52,7 +52,7 @@ function checkout(){
     }
 
     // 🔥 Replace with your Cashfree Intelliform Link
-    let intelliLink = "https://payments.cashfree.com/intelliform/YOUR_LINK";
+    let intelliLink = "https://payments.cashfree.com/forms/Food-Shop";
 
     window.location.href = intelliLink + "?amount=" + total;
 }
